@@ -7,17 +7,20 @@
    ██║   ██║██║            ██║   ██╔══██║██║            ██║   ██║   ██║██╔══╝  
    ██║   ██║╚██████╗       ██║   ██║  ██║╚██████╗       ██║   ╚██████╔╝███████╗
    ╚═╝   ╚═╝ ╚═════╝       ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚═╝    ╚═════╝ ╚══════╝
-                                                                                 
-              ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
-             ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
-             ▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌
-             ▐░▌       ▐░▌          ▐░▌▐░▌       ▐░▌
-             ▐░█▄▄▄▄▄▄▄█░▌ ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌
-             ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
-             ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ 
-             ▐░▌          ▐░▌          ▐░▌          
-             ▐░▌          ▐░▌          ▐░▌          
-              ▀            ▀            ▀           
+
+                              ╔═══════╦═══════╦═══════╗
+                              ║       ║       ║       ║
+                              ║   X   ║   O   ║   X   ║
+                              ║       ║       ║       ║
+                              ╠═══════╬═══════╬═══════╣
+                              ║       ║       ║       ║
+                              ║   O   ║   X   ║   O   ║
+                              ║       ║       ║       ║
+                              ╠═══════╬═══════╬═══════╣
+                              ║       ║       ║       ║
+                              ║   X   ║   O   ║   X   ║
+                              ║       ║       ║       ║
+                              ╚═══════╩═══════╩═══════╝
 ```
 
 <div align="center">
@@ -44,15 +47,15 @@ A **peer-to-peer betting platform** where two players can wager MATIC on a Tic-T
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  💰 Bet Real Money     🎮 Play Classic Game     🏆 Winner Gets All│
+│  💰 Bet Real Money     🎮 Play Classic Game     🏆 Winner Gets 95%  │
 │  🔐 Trustless Escrow   ⚡ Instant Payouts      🎉 Epic Celebrations│
-│  🌍 No Middleman       💎 Polygon Network      🚫 Zero House Edge │
+│  🌍 Low Fees (5%)      💎 Polygon Network      ⚡ Fast Settlement  │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 - **🎲 No Draws**: If there's a draw, the board auto-resets until someone wins
 - **⚡ Real-Time**: Live updates via polling - see your opponent's moves instantly
-- **💸 Fair Play**: Smart contract ensures winner gets exactly 2x their bet
+- **💸 Fair Play**: Smart contract ensures winner gets 1.9x their bet (5% hosting fee)
 - **🎨 Beautiful UI**: Minimalistic dark theme with confetti celebrations
 - **📱 Mobile Ready**: Play on any device with MetaMask
 
@@ -121,21 +124,6 @@ A **peer-to-peer betting platform** where two players can wager MATIC on a Tic-T
 - ✅ Trustless settlement
 
 </td>
-</tr>
-<tr>
-<td>
-
-### 💰 Money
-- ✅ Bet any amount in MATIC
-- ✅ Real-time USD conversion
-- ✅ Winner gets 2x bet amount
-- ✅ No house edge (0% fees)
-- ✅ Instant payouts
-
-</td>
-<td>
-
-### 🎨 UX/UI
 - ✅ Auto wallet connection
 - ✅ Minimalistic dark theme
 - ✅ Fixed 3x3 grid (100px cells)
@@ -196,7 +184,8 @@ joinWager(matchId) payable
 // Winner claims prize
 settle(matchId, winner, signature)
 → Verifies backend signature
-→ Pays 2x bet to winner
+→ Pays 95% of total pot to winner (5% hosting fee)
+→ Winner receives 1.9x their original bet
 ```
 
 ### The Backend (Referee)
@@ -375,13 +364,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [🎮 Play Now](https://p2p-tic-tac-toe-1063244275551.us-central1.run.app) • [📖 Read Docs](SPEC.md) • [🐛 Report Issues](https://github.com/88448844/polygon-p2p-tictactoe/issues)
 
 ```
-     X | O | X
-    ───┼───┼───
-     O | X | O
-    ───┼───┼───
-     X | O | X
+                        ╔═══════╦═══════╦═══════╗
+                        ║       ║       ║       ║
+                        ║   X   ║   O   ║   X   ║
+                        ║       ║       ║       ║
+                        ╠═══════╬═══════╬═══════╣
+                        ║       ║       ║       ║
+                        ║   O   ║   X   ║   O   ║
+                        ║       ║       ║       ║
+                        ╠═══════╬═══════╬═══════╣
+                        ║       ║       ║       ║
+                        ║   X   ║   O   ║   X   ║
+                        ║       ║       ║       ║
+                        ╚═══════╩═══════╩═══════╝
 ```
 
-**No draws. Only winners. 🏆**
+**🎯 No draws. Only winners. 🏆**
 
 </div>
