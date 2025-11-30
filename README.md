@@ -47,7 +47,7 @@ A **peer-to-peer betting platform** where two players can wager MATIC on a Tic-T
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  💰 Bet Real Money     🎮 Play Classic Game     🏆 Winner Gets 95%  │
+│  💰 Bet Real Money     🎮 Play Classic Game     🏆 Winner Gets 95% │
 │  🔐 Trustless Escrow   ⚡ Instant Payouts      🎉 Epic Celebrations│
 │  🌍 Low Fees (5%)      💎 Polygon Network      ⚡ Fast Settlement  │
 └─────────────────────────────────────────────────────────────────┘
